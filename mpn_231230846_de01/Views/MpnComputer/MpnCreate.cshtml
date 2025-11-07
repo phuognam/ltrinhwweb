@@ -1,0 +1,32 @@
+﻿@model mpn_231230846_de01.Models.MpnComputer
+@{
+    ViewData["Title"] = "Thêm sản phẩm";
+}
+<h2>Thêm sản phẩm</h2>
+
+<form asp-action="MpnCreate" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label asp-for="mpnComName"></label>
+        <input asp-for="mpnComName" class="form-control" />
+        <span asp-validation-for="mpnComName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="mpnComPrice"></label>
+        <input asp-for="mpnComPrice" class="form-control" />
+        <span asp-validation-for="mpnComPrice" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ImageFile"></label>
+        <input asp-for="ImageFile" type="file" class="form-control" />
+        <span asp-validation-for="ImageFile" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="mpnComStatus"></label>
+        <input asp-for="mpnComStatus" type="checkbox" />
+    </div>
+    <button type="submit" class="btn btn-primary">Lưu</button>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

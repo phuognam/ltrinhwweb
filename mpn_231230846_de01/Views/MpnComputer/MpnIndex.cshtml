@@ -1,0 +1,43 @@
+﻿@model IEnumerable<mpn_231230846_de01.Models.MpnComputer>
+@{
+    ViewData["Title"] = "Danh sách MpnComputer";
+}
+<h2>Danh sách sản phẩm</h2>
+
+<p>
+    <a asp-controller="MpnComputer" asp-action="MpnCreate">Thêm mới</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Tên</th>
+            <th>Giá</th>
+            <th>Ảnh</th>
+            <th>Tình trạng</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model)
+    {
+            <tr>
+                <td>@item.mpnComName</td>
+                <td>@item.mpnComPrice</td>
+                <td>
+                    @if (!string.IsNullOrEmpty(item.mpnComImage))
+                    {
+                        <img src="@item.mpnComImage" style="max-width:100px;" />
+                    }
+                </td>
+                <td>@(item.mpnComStatus ? "Còn hàng" : "Hết hàng")</td>
+                <td>
+                    <a asp-action="MpnDetails" asp-route-id="@item.mpnComId">Xem</a> |
+                    <a asp-action="MpnEdit" asp-route-id="@item.mpnComId">Sửa</a> |
+                    <a asp-action="MpnDelete" asp-route-id="@item.mpnComId">Xóa</a>
+                </td>
+            </tr>
+    }
+    </tbody>
+</table>
+
