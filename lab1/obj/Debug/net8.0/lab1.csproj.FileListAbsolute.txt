@@ -31,3 +31,4 @@ C:\Users\Admin\source\repos\lab1\lab1\obj\Debug\net8.0\refint\lab1.dll
 C:\Users\Admin\source\repos\lab1\lab1\obj\Debug\net8.0\lab1.pdb
 C:\Users\Admin\source\repos\lab1\lab1\obj\Debug\net8.0\lab1.genruntimeconfig.cache
 C:\Users\Admin\source\repos\lab1\lab1\obj\Debug\net8.0\ref\lab1.dll
+C:\Users\Admin\source\repos\lab1\lab1\obj\Debug\net8.0\lab1.sourcelink.json
